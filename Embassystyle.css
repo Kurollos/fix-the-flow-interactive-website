@@ -16,21 +16,38 @@ header {
     padding: 10px 40px;
 }
 
-header nav select {
-    background-color: #0b2545;
+/* Maak de navbar horizontaal */
+header nav ul {
+    list-style: none;          /* Verwijder bullets */
+    padding: 0;
+    margin: 0;
+    display: flex;             /* Flexbox voor horizontale layout */
+    gap: 20px;                 /* Ruimte tussen items */
+    align-items: center;       /* Verticaal centreren */
+}
+
+/* Verwijder marge/padding op li */
+header nav li {
+    margin: 0;
+}
+
+/* Styling van de links */
+header nav a {
+    text-decoration: none;
     color: white;
-    border: 1px solid white;
+    font-weight: bold;
     padding: 5px 10px;
 }
 
-header .tickets-button {
-    background-color: white;
-    color: #0b2545;
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Styling van de zoekbox */
+header nav input[type="search"] {
+    padding: 5px 10px;
+    border-radius: 5px;
     border: none;
-    padding: 8px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
 }
 
 /* Hero sectie */
@@ -122,5 +139,12 @@ header .tickets-button {
 
     .content-right img {
         width: 100%;
+    }
+
+    /* Navbar wordt stacked op mobiel */
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
     }
 }

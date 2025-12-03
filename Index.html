@@ -4,37 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Embassy of the Free Mind</title>
-    <!-- Verwijzing naar externe CSS -->
     <link rel="stylesheet" href="Embassystyle.css">
 </head>
 <body>
     <!-- Header / Navbar -->
     <header>
+        <h1>Embassy of the Free Mind</h1>
         <nav>
-            <select>
-                <option>Plan your visit</option>
-                <option>Collection</option>
-                <option>Stories</option>
-            </select>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Plan your Visit</a></li>
+                <li><a href="#">Tickets</a></li>
+                <li><a href="catalogembassy.html">Catalogscollection</a></li>
+                <li><a href="#">Stories</a></li>
+                <li><input type="search" id="site-search" name="q" placeholder="Zoeken..."></li>
+            </ul>
         </nav>
-        <button class="tickets-button">Tickets</button>
     </header>
 
     <!-- Hero sectie -->
     <section class="hero">
-        <div class="hero-left">
-            <img src="https://via.placeholder.com/200x150?text=Image+1" alt="Image 1">
-            <img src="https://via.placeholder.com/200x150?text=Image+2" alt="Image 2">
-            <img src="https://via.placeholder.com/200x150?text=Image+3" alt="Image 3">
-        </div>
-        <div class="hero-right">
+        <aside class="hero-left">
+            <figure><img src="https://via.placeholder.com/200x150?text=Image+1" alt="Image 1"></figure>
+            <figure><img src="https://via.placeholder.com/200x150?text=Image+2" alt="Image 2"></figure>
+            <figure><img src="https://via.placeholder.com/200x150?text=Image+3" alt="Image 3"></figure>
+        </aside>
+        <figure class="hero-right">
             <img src="https://via.placeholder.com/600x400?text=Main+Hero+Image" alt="Main Hero">
-        </div>
+        </figure>
     </section>
 
     <!-- Hoofdinhoud -->
     <section class="content">
-        <div class="content-left">
+        <article class="content-left">
             <h1>Embassy of the Free Mind</h1>
             <a href="#" class="click-button">Click here</a>
             <h2>DIT IS EEN LANGE TITEL</h2>
@@ -43,10 +45,10 @@
                 Recusandae voluptatibus iste consequatur minima cupiditate nobis fugit repellendus officia quam officiis. Ab ipsa minima id alias repudiandae ex deleniti illum. 
                 Dolore voluptatibus dolorem enim nihil et unde commodi accusantium!
             </p>
-        </div>
-        <div class="content-right">
+        </article>
+        <figure class="content-right">
             <img src="https://via.placeholder.com/300x300?text=Side+Image" alt="Side Image">
-        </div>
+        </figure>
     </section>
 </body>
 </html>
