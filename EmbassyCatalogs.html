@@ -22,6 +22,62 @@
         </nav>
     </header>
 
+    <section class="catalogus-formulier">
+    <h1>Voeg een Boek Toe aan de Catalogus</h1>
+
+    <div class="form-preview-container">
+
+        <!-- FORMULIER (LINKERKANT)  -->
+        <form id="boekForm" class="boek-form">
+
+            <!-- Titel -->
+            <label for="titel">Titel:</label>
+            <input type="text" id="titel" name="titel" placeholder="Voer boektitel in" required>
+
+            <!-- Auteur -->
+            <label for="auteur">Auteur:</label>
+            <input type="text" id="auteur" name="auteur" placeholder="Auteur" required>
+
+            <!-- Thema's / Tags -->
+            <label for="themas">Thema's:</label>
+            <input type="text" id="themas" name="themas" placeholder="Typ thema en druk op Enter">
+            <div id="tag-container" class="tag-container"></div>
+
+            <!-- Publicatiejaar -->
+            <label for="jaar">Publicatiejaar:</label>
+            <input type="number" id="jaar" name="jaar" placeholder="2025" min="1000" max="2099">
+
+            <!-- Drag & Drop -->
+            <label>Afbeeldingen:</label>
+            <div id="drop-area" class="drop-area">
+                Sleep afbeeldingen hier of klik om te selecteren
+                <input type="file" id="images" multiple accept="image/*">
+            </div>
+
+            <!-- Knoppen -->
+            <div class="form-buttons">
+                <button type="submit" class="save-btn">Opslaan</button>
+                <button type="button" id="resetBtn" class="cancel-btn">Annuleren</button>
+            </div>
+        </form>
+
+        <!-- LIVE PREVIEW (RECHTERKANT) -->
+        <div class="preview">
+            <h2>Live Preview</h2>
+
+            <div id="preview-box" class="preview-box">
+                <h3 id="preview-titel">Titel: </h3>
+                <p id="preview-auteur">Auteur: </p>
+                <p id="preview-themas">Thema's: </p>
+                <p id="preview-jaar">Jaar: </p>
+                <div id="preview-images" class="preview-images"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
     <!-- Boeken Catalogus -->
     <main>
         <section class="catalog">
