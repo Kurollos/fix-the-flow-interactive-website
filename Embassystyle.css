@@ -58,7 +58,7 @@ header nav input[type="search"] {
     align-items: center;     /* verticaal centreren */
     text-align: center;
     height: 500px; /* hoogte hero */
-    background-image: url('image.png'); /* achtergrond */
+    background-image: url('Embassy.png'); /* achtergrond */
     background-size: cover;        /* bedekt hele sectie */
     background-position: center;   /* afbeelding gecentreerd */
     background-repeat: no-repeat;
