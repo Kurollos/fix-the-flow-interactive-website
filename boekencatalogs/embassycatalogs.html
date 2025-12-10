@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boeken Catalogus</title>
+    <link rel="stylesheet" href="embassycatalogs.css">
+    <script src="formulier.js" defer></script>
+</head>
+<body>
+   <!-- Header -->
+<header>
+    <h1>Embassy of the free mind</h1>
+    <nav>
+        <ul>
+            <li><a href="embassyhomepageindex.html">Home</a></li>
+            <li><a href="#">Plan your Visit</a></li>
+            <li><a href="#">Tickets</a></li>
+            <li><a href="EmbassyCatalogs.html">Catalogscollection</a></li>
+            <li><a href="#">Stories</a></li>
+            <li><input type="search" id="site-search" name="q" placeholder="Zoeken..."></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Formulier -->
+<section class="catalogus-formulier">
+  <h1>Voeg een Boek Toe aan de Catalogus</h1>
+  <form id="boekForm" class="boek-form">
+    <label>
+      Titel:
+      <input type="text" id="titel" class="input-titel" placeholder="Voer boektitel in" required>
+    </label>
+    <label>
+      Auteur:
+      <input type="text" id="auteur" class="input-auteur" placeholder="Auteur" required>
+    </label>
+    <label>
+      Thema's:
+      <input type="text" id="themas" class="input-themas" placeholder="Typ thema">
+    </label>
+    <label>
+      Jaar:
+      <input type="number" id="jaar" class="input-jaar" placeholder="2025" min="1000" max="2099">
+    </label>
+
+    <div class="form-buttons">
+      <button type="submit" class="save-btn">Opslaan</button>
+      <button type="button" class="cancel-btn" id="resetBtn">Annuleren</button>
+    </div>
+  </form>
+
+  <!-- Live Preview -->
+  <div class="preview">
+      <h2>Preview:</h2>
+      <p id="preview-titel">Titel: </p>
+      <p id="preview-auteur">Auteur: </p>
+      <p id="preview-jaar">Jaar: </p>
+      <p id="preview-themas">Thema's: </p>
+  </div>
+</section>
+
+<!-- Boeken Catalogus -->
+<main>
+    <section class="catalog">
+        <!-- Vooraf ingevulde boeken -->
+        <article class="book-card">
+            <figcaption>De Avonturen van Tom</figcaption>
+            <p class="author">Auteur: Jan de Vries</p>
+            <p class="description">
+                Een spannend verhaal over een jonge avonturier die de wereld rondreist en bijzondere vrienden ontmoet.
+            </p>
+        </article>
+        <article class="book-card">
+            <figcaption>Het Geheim van de Tijd</figcaption>
+            <p class="author">Auteur: Anna Janssen</p>
+            <p class="description">
+                Een intrigerend verhaal waarin tijdreizen en mysterieuze gebeurtenissen centraal staan.
+            </p>
+        </article>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <nav class="footer-menu">
+    <ul>
+      <li><a href="#">Donatie</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+  </nav>
+</footer>

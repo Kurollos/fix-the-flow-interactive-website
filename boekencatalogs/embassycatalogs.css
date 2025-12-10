@@ -1,0 +1,400 @@
+/* Algemene stijl */
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #0b2545;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav input[type="search"] {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* ====== FORMULIER SECTIE ====== */
+.catalogus-formulier {
+    padding: 40px;
+    background-color: #f3f3f3;
+    margin-top: 40px;
+}
+
+.catalogus-formulier h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #0b2545;
+    text-align: center;
+}
+
+/* Lay-out: formulier links, preview rechts */
+.form-preview-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/* ====== FORMULIER (LINKS) ====== */
+.boek-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 420px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.boek-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 20px;
+}
+
+.boek-form input[type="text"],
+.boek-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.boek-form input:focus {
+    border-color: #0b2545;
+    outline: none;
+}
+
+/* Tags container */
+.tag-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+/* Tags */
+.tag {
+    background-color: #0b2545;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* X voor verwijderen */
+.tag .remove-tag {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* ====== DRAG & DROP ====== */
+.drop-area {
+    margin-top: 10px;
+    padding: 20px;
+    border: 2px dashed #0b2545;
+    text-align: center;
+    border-radius: 10px;
+    color: #0b2545;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: #f9f9f9;
+}
+
+.drop-area:hover {
+    background-color: #eef3ff;
+}
+
+.drop-area input[type="file"] {
+    display: none;
+}
+
+/* Buttons */
+.form-buttons {
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+}
+
+.save-btn,
+.cancel-btn {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.save-btn {
+    background-color: #0b2545;
+    color: white;
+}
+
+.save-btn:hover {
+    background-color: #133b6e;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+}
+
+.cancel-btn:hover {
+    background-color: #b8b8b8;
+}
+
+/* ====== PREVIEW (RECHTERKANT) ====== */
+.preview {
+    width: 380px;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.preview h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #0b2545;
+}
+
+.preview-box {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.preview-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.preview-images img {
+    width: 100px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 900px) {
+    .form-preview-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .preview,
+    .boek-form {
+        width: 100%;
+        max-width: 420px;
+    }
+}
+
+
+/* Catalogus sectie */
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 40px;
+}
+
+.book-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.book-card figure {
+    margin: 0;
+}
+
+.book-card img {
+    width: 100%;
+    display: block;
+}
+
+.book-card figcaption {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.author {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 14px;
+    color: #444;
+    padding: 0 10px 15px 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: #0b2545;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 30px;
+    font-family: 'Georgia', serif;
+}
+
+.footer h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+
+.footer-info p {
+    margin: 2px 0;
+    font-size: 14px;
+}
+
+.footer-social .social-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.footer-social a {
+    background-color: #1a3d7c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-social a:hover {
+    background-color: #ffffff33;
+}
+
+.footer-newsletter form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-newsletter input[type="email"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+}
+
+.footer-newsletter button {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    background-color: #ffffff;
+    color: #0b2545;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.footer-newsletter button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Responsief voor mobiel */
+@media (max-width: 900px) {
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-newsletter input[type="email"] {
+        width: 100%;
+    }
+
+    .footer-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-social .social-buttons {
+        justify-content: flex-start;
+    }
+}
+
+/* Responsief */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
