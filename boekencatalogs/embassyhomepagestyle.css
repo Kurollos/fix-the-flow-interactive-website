@@ -1,0 +1,292 @@
+/* Algemene stijl */
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #f8f8f8;
+    color: #1a1a1a;
+}
+
+/* Header / Navbar */
+header {
+    background-color: #0b2545;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+/* Maak de navbar horizontaal */
+header nav ul {
+    list-style: none;          /* Verwijder bullets */
+    padding: 0;
+    margin: 0;
+    display: flex;             /* Flexbox voor horizontale layout */
+    gap: 20px;                 /* Ruimte tussen items */
+    align-items: center;       /* Verticaal centreren */
+}
+
+/* Verwijder marge/padding op li */
+header nav li {
+    margin: 0;
+}
+
+/* Styling van de links */
+header nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Styling van de zoekbox */
+header nav input[type="search"] {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Hero sectie */
+.hero {
+    position: relative; /* nodig voor overlay */
+    display: flex;
+    justify-content: center; /* horizontaal centreren */
+    align-items: center;     /* verticaal centreren */
+    text-align: center;
+    height: 500px; /* hoogte hero */
+    background-image: url('Embassy.png'); /* achtergrond */
+    background-size: cover;        /* bedekt hele sectie */
+    background-position: center;   /* afbeelding gecentreerd */
+    background-repeat: no-repeat;
+    color: white;
+    padding: 20px 40px;
+    gap: 20px; /* optioneel, als je content naast elkaar wilt */
+}
+
+/* Overlay voor beter contrast */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4); /* semi-transparant zwart */
+    z-index: 1;
+}
+
+/* Hero content boven overlay */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.click-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0b2545;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Responsief */
+@media (max-width: 900px) {
+    .hero {
+        height: 400px;
+        padding: 0 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+}
+
+/* Hoofdinhoud */
+.content {
+    padding: 40px;
+    display: flex;
+    gap: 40px;
+}
+
+.content-left {
+    flex: 2;
+}
+
+.content-left h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.content-left h2 {
+    font-size: 20px;
+    color: #0b2545;
+    margin-bottom: 15px;
+}
+
+.content-left p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.content-right {
+    flex: 1;
+}
+
+.content-right img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Knoppen */
+.click-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0b2545;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    background-color: #0b2545;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 30px;
+    font-family: 'Georgia', serif;
+}
+
+.footer h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+
+.footer-info p {
+    margin: 2px 0;
+    font-size: 14px;
+}
+
+.footer-social .social-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.footer-social a {
+    background-color: #1a3d7c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-social a:hover {
+    background-color: #ffffff33;
+}
+
+.footer-newsletter form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-newsletter input[type="email"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+}
+
+.footer-newsletter button {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    background-color: #ffffff;
+    color: #0b2545;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.footer-newsletter button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Responsief voor mobiel */
+@media (max-width: 900px) {
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-newsletter input[type="email"] {
+        width: 100%;
+    }
+
+    .footer-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-social .social-buttons {
+        justify-content: flex-start;
+    }
+}
+
+/* Responsief */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
