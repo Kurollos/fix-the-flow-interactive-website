@@ -23,6 +23,52 @@ v<!DOCTYPE html>
     </nav>
 </header>
 
+<!-- Formulier Sectie -->
+<section class="catalogus-formulier">
+  <h1>Voeg een Boek Toe aan de Catalogus</h1>
+
+  <form id="boekForm" class="boek-form">
+    <!-- Titel -->
+    <label for="titel">
+      Titel:
+      <input type="text" id="titel" class="input-titel" placeholder="Voer boektitel in" required>
+    </label>
+
+    <!-- Auteur -->
+    <label for="auteur">
+      Auteur:
+      <input type="text" id="auteur" class="input-auteur" placeholder="Auteur" required>
+    </label>
+
+    <!-- Thema's -->
+    <label for="themas">
+      Thema's:
+      <input type="text" id="themas" class="input-themas" placeholder="Typ thema">
+    </label>
+
+    <!-- Jaar -->
+    <label for="jaar">
+      Jaar:
+      <input type="number" id="jaar" class="input-jaar" placeholder="2025" min="1000" max="2099">
+    </label>
+
+    <!-- Knoppen -->
+    <div class="form-buttons">
+      <button type="submit" class="save-btn">Opslaan</button>
+      <button type="button" class="cancel-btn" id="resetBtn">Annuleren</button>
+    </div>
+  </form>
+
+  <!-- Live Preview -->
+  <div class="preview">
+    <h2>Preview:</h2>
+    <p id="preview-titel">Titel: </p>
+    <p id="preview-auteur">Auteur: </p>
+    <p id="preview-jaar">Jaar: </p>
+    <p id="preview-themas">Thema's: </p>
+  </div>
+</section>
+
 
 <!-- Boeken Catalogus -->
 <main>
