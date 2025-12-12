@@ -5,12 +5,17 @@ document.addEventListener("DOMContentLoaded", function() {
     const auteurInput = document.querySelector("#auteur");
     const jaarInput = document.querySelector("#jaar");
     const themaInput = document.querySelector("#themas");
+    const beschrijvingInput = document.querySelector("#beschrijving");
+
+ 
 
     // ----------- PREVIEW ELEMENTEN -----------
     const previewTitel = document.querySelector("#preview-titel");
     const previewAuteur = document.querySelector("#preview-auteur");
     const previewJaar = document.querySelector("#preview-jaar");
     const previewTags = document.querySelector("#preview-themas");
+    const previewBeschrijving = document.querySelector("#preview-beschrijving");
+
 
     // ----------- CATALOGUS & BUTTONS -----------
     const catalogSection = document.querySelector(".catalog");
@@ -23,6 +28,8 @@ document.addEventListener("DOMContentLoaded", function() {
         previewAuteur.textContent = "Auteur: " + auteurInput.value;
         previewJaar.textContent = "Jaar: " + jaarInput.value;
         previewTags.textContent = "Thema's: " + themaInput.value;
+        previewBeschrijving.textContent = "Beschrijving: " + beschrijvingInput.value;
+
     }
 
     // Event listeners voor live preview tijdens typen
@@ -37,6 +44,8 @@ document.addEventListener("DOMContentLoaded", function() {
         auteurInput.value = "";
         jaarInput.value = "";
         themaInput.value = "";
+        beschrijvingInput.value = "";
+
         updatePreview();
     }
 
@@ -73,10 +82,17 @@ document.addEventListener("DOMContentLoaded", function() {
         tags.classList.add("tags");
         tags.textContent = themaInput.value ? `Thema's: ${themaInput.value}` : "";
 
+        const description = document.createElement("p");
+        description.classList.add("description");
+        description.textContent = beschrijvingInput.value;
+
+
         bookCard.appendChild(figcaption);
         bookCard.appendChild(author);
         if (jaarInput.value) bookCard.appendChild(year);
         if (themaInput.value) bookCard.appendChild(tags);
+        bookCard.appendChild(description);
+
 
         catalogSection.appendChild(bookCard);
 
