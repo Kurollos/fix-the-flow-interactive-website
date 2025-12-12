@@ -83,7 +83,7 @@ header nav input[type="search"] {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 700px;
+    min-width: 700px;
 }
 
 .hero-content h1 {

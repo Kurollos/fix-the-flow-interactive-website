@@ -179,6 +179,29 @@ nav input[type="search"] {
     background-color: #b8b8b8;
 }
 
+.feedback {
+    opacity: 0;
+    transform: translateY(-10px);
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    pointer-events: none;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1000;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.feedback.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 /* ====== PREVIEW (RECHTERKANT) ====== */
 .preview {
     width: 380px;
