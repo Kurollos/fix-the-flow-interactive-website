@@ -342,19 +342,33 @@ nav input[type="search"] {
     font-size: 14px;
 }
 
-.footer-social .social-buttons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+/* Knoppen met logo */
+.click-button {
+    display: inline-flex;         /* logo en tekst naast elkaar */
+    align-items: center;
+    gap: 10px;                    /* ruimte tussen logo en tekst */
+    margin: 10px 5px;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.footer-social a {
-    background-color: #1a3d7c;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 14px;
+/* Hover-effect */
+.click-button:hover {
+    transform: scale(1.05);
+}
+
+/* Specifieke kleuren per kanaal */
+.facebook { background-color: #3B5998; }
+.instagram { background-color: #E1306C; }
+.youtube { background-color: #FF0000; }
+
+/* Iconen */
+.click-button i {
+    font-size: 20px;
 }
 
 .footer-social a:hover {
