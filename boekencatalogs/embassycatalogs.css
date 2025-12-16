@@ -16,6 +16,12 @@ header {
     align-items: center;
 }
 
+/* Logo in header */
+#logo {
+width: 140px; /* pas grootte aan */
+height: auto; /* behoud verhouding */
+}
+
 header h1 {
     margin: 0;
 }

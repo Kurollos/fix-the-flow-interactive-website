@@ -16,6 +16,12 @@ header {
     padding: 10px 40px;
 }
 
+/* Logo in header */
+#logo {
+width: 140px; /* pas grootte aan */
+height: auto; /* behoud verhouding */
+}
+
 /* Maak de navbar horizontaal */
 header nav ul {
     list-style: none;          /* Verwijder bullets */
