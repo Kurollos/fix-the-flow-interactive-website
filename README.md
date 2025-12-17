@@ -48,6 +48,7 @@ https://kurollos.github.io/fix-the-flow-interactive-website/boekencatalogs/catal
 ## Kenmerken
 
 HTML
+
 Het formulier is opgebouwd met semantische HTML:
 <form> voor het formulier
 <label> en <input> voor invoervelden
@@ -56,6 +57,7 @@ Het formulier is opgebouwd met semantische HTML:
 Door labels te koppelen aan inputs is het formulier toegankelijker.
 
 CSS
+
 CSS wordt gebruikt voor:
 De layout en uitlijning van het formulier
 Visuele feedback (hover, focus, foutmeldingen)
@@ -72,6 +74,7 @@ De gebruiker vult het formulier in (HTML).
 CSS zorgt voor duidelijke styling en feedback bij interactie.
 JavaScript controleert de invoer en geeft feedback.
 Bij een geldig formulier wordt het boek toegevoegd aan de catalogus
+
 ## Bronnen
 
 ## Licentie
