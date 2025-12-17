@@ -70,6 +70,7 @@ Validatie van het formulier (controle op lege velden)
 Het tonen van foutmeldingen en succesfeedback
 
 Werking van de interactie
+
 De gebruiker vult het formulier in (HTML).
 CSS zorgt voor duidelijke styling en feedback bij interactie.
 JavaScript controleert de invoer en geeft feedback.
