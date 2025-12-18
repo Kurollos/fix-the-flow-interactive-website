@@ -1,4 +1,6 @@
-/* Algemene stijl */
+/* =============================
+   Algemene stijl
+============================= */
 body {
     margin: 0;
     font-family: 'Georgia', serif;
@@ -18,8 +20,8 @@ header {
 
 /* Logo in header */
 #logo {
-width: 140px; /* pas grootte aan */
-height: auto; /* behoud verhouding */
+    width: 140px; /* pas grootte aan */
+    height: auto; /* behoud verhouding */
 }
 
 header h1 {
@@ -51,216 +53,9 @@ nav input[type="search"] {
     border: none;
 }
 
-/* ====== FORMULIER SECTIE ====== */
-.catalogus-formulier {
-    padding: 40px;
-    background-color: #f3f3f3;
-    margin-top: 40px;
-}
-
-.catalogus-formulier h1 {
-    font-size: 32px;
-    margin-bottom: 30px;
-    color: #0b2545;
-    text-align: center;
-}
-
-/* Lay-out: formulier links, preview rechts */
-.form-preview-container {
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-
-/* ====== FORMULIER (LINKS) ====== */
-.boek-form {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 420px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.boek-form label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 6px;
-    margin-top: 20px;
-}
-
-.boek-form input[type="text"],
-.boek-form input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-}
-
-.boek-form input:focus {
-    border-color: #0b2545;
-    outline: none;
-}
-
-/* Tags container */
-.tag-container {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 12px;
-}
-
-/* Tags */
-.tag {
-    background-color: #0b2545;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-/* X voor verwijderen */
-.tag .remove-tag {
-    cursor: pointer;
-    font-weight: bold;
-}
-
-/* ====== DRAG & DROP ====== */
-.drop-area {
-    margin-top: 10px;
-    padding: 20px;
-    border: 2px dashed #0b2545;
-    text-align: center;
-    border-radius: 10px;
-    color: #0b2545;
-    cursor: pointer;
-    font-size: 15px;
-    background-color: #f9f9f9;
-}
-
-.drop-area:hover {
-    background-color: #eef3ff;
-}
-
-.drop-area input[type="file"] {
-    display: none;
-}
-
-/* Buttons */
-.form-buttons {
-    margin-top: 25px;
-    display: flex;
-    gap: 20px;
-}
-
-.save-btn,
-.cancel-btn {
-    padding: 12px 20px;
-    border-radius: 8px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.save-btn {
-    background-color: #0b2545;
-    color: white;
-}
-
-.save-btn:hover {
-    background-color: #133b6e;
-}
-
-.cancel-btn {
-    background-color: #ccc;
-}
-
-.cancel-btn:hover {
-    background-color: #b8b8b8;
-}
-
-.feedback {
-    opacity: 0;
-    transform: translateY(-10px);
-    background-color: #4caf50;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    pointer-events: none;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    z-index: 1000;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.feedback.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-/* ====== PREVIEW (RECHTERKANT) ====== */
-.preview {
-    width: 380px;
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.preview h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #0b2545;
-}
-
-.preview-box {
-    background-color: #f8f8f8;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.preview-images {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.preview-images img {
-    width: 100px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
-
-
-/* ====== RESPONSIVE ====== */
-@media (max-width: 900px) {
-    .form-preview-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .preview,
-    .boek-form {
-        width: 100%;
-        max-width: 420px;
-    }
-}
-
-
-/* Catalogus sectie */
+/* =============================
+   Catalogus sectie
+============================= */
 .catalog {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -308,7 +103,9 @@ nav input[type="search"] {
     padding: 0 10px 15px 10px;
 }
 
-/* Footer */
+/* =============================
+   Footer
+============================= */
 .footer {
     background-color: #0b2545;
     color: white;
@@ -350,9 +147,9 @@ nav input[type="search"] {
 
 /* Knoppen met logo */
 .click-button {
-    display: inline-flex;         /* logo en tekst naast elkaar */
+    display: inline-flex; /* logo en tekst naast elkaar */
     align-items: center;
-    gap: 10px;                    /* ruimte tussen logo en tekst */
+    gap: 10px; /* ruimte tussen logo en tekst */
     margin: 10px 5px;
     padding: 10px 20px;
     color: white;
@@ -362,7 +159,6 @@ nav input[type="search"] {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-/* Hover-effect */
 .click-button:hover {
     transform: scale(1.05);
 }
@@ -408,7 +204,9 @@ nav input[type="search"] {
     background-color: #e0e0e0;
 }
 
-/* Responsief voor mobiel */
+/* =============================
+   Responsieve styling
+============================= */
 @media (max-width: 900px) {
     .footer {
         flex-direction: column;
@@ -429,7 +227,6 @@ nav input[type="search"] {
     }
 }
 
-/* Responsief */
 @media (max-width: 600px) {
     header {
         flex-direction: column;
