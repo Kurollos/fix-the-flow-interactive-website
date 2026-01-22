@@ -97,6 +97,11 @@ document.addEventListener("DOMContentLoaded", function() {
         catalogSection.appendChild(bookCard);
 
         resetForm();
+   // --- ANIMATIE TRIGGER ---
+        feedback.classList.add("show");        // laat melding zien
+        setTimeout(() => {
+            feedback.classList.remove("show"); // verdwijnt na 2 seconden
+        }, 2000);
     });
 
 });
